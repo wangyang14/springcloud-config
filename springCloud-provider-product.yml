@@ -35,8 +35,8 @@ eureka:
     lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
     
 info:
-  app.name: springcloud-provider-product11
-  company.name: enjoy11
+  app.name: springcloud-provider-product22
+  company.name: enjoy22
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
