@@ -20,9 +20,9 @@ spring:
     name: springCloud-provider-product #eureka前面的名字
   profiles: dev
   
-# logging:
-#   level: 
-#     cn.enjoy.mapper: debug
+logging:
+  level: 
+    cn.enjoy.mapper: debug
     
 eureka:
   client:
@@ -35,8 +35,8 @@ eureka:
     lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
     
 info:
-  app.name: springcloud-provider-product22
-  company.name: enjoy22
+  app.name: springcloud-provider-product11
+  company.name: enjoy11
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
