@@ -1,0 +1,41 @@
+spring:
+    profiles:
+        active:
+        - dev
+---
+server: 
+    port: 8201
+    
+spring:
+    profiles: dev
+    application:
+        name: springCloud-test-client5
+        
+eureka: 
+    client: 
+        serviceUrl: 
+            defaultZone: http://admin:enjoy@localhost:7301/eureka
+        register-with-eureka: false
+        
+info: 
+    app.name: springCloud-config-client-devdev
+    company.name: enjoy
+    
+---
+server: 
+    port: 8102
+    
+spring:
+    profiles: beta
+    application:
+        name: springCloud-test-client2
+        
+eureka: 
+    client: 
+        serviceUrl: 
+            defaultZone: http://admin:enjoy@localhost:7301/eureka
+        register-with-eureka: false
+        
+info: 
+    app.name: springCloud-config-client-beta
+    company.name: enjoybeta
