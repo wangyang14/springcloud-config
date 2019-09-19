@@ -22,7 +22,7 @@ spring:
   
 logging:
   level: 
-    cn.enjoy.mapper: debug
+    cn.enjoy.mapper: info
     
 eureka:
   client:
@@ -67,7 +67,7 @@ spring:
   
 logging:
   level: 
-    cn.enjoy.mapper: debug
+    cn.enjoy.mapper: info
     
 eureka:
   client:
