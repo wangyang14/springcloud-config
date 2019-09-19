@@ -23,7 +23,7 @@ spring:
 logging:
   level: 
     cn.enjoy.mapper: info
-    org.springframework.boot.autoconfigure: ERROR
+    org.springframework.boot: ERROR
     
 eureka:
   client:
@@ -69,7 +69,7 @@ spring:
 logging:
   level:
     cn.enjoy.mapper: info
-    org.springframework.boot.autoconfigure: ERROR 
+    org.springframework.boot: ERROR 
     
 eureka:
   client:
