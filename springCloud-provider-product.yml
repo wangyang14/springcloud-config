@@ -20,9 +20,9 @@ spring:
     name: springCloud-provider-product #eureka前面的名字
   profiles: dev
   
-logging:
-  level: 
-    cn.enjoy.mapper: info
+#logging:
+  #level: 
+    #cn.enjoy.mapper: info
     
 eureka:
   client:
@@ -65,9 +65,9 @@ spring:
     name: springCloud-provider-product #eureka前面的名字
   profiles: beta
   
-logging:
-  level: 
-    cn.enjoy.mapper: info
+#logging:
+  #level: 
+    #cn.enjoy.mapper: info
     
 eureka:
   client:
