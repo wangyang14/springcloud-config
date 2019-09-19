@@ -23,7 +23,7 @@ spring:
 logging:
   level: 
     cn.enjoy.mapper: info
-    org.springframework.boot: ERROR
+    org.springframework.boot: ERROR  #关闭spring启动时无用日志
     
 eureka:
   client:
@@ -69,7 +69,7 @@ spring:
 logging:
   level:
     cn.enjoy.mapper: info
-    org.springframework.boot: ERROR 
+    org.springframework.boot: ERROR #关闭spring启动时无用日志
     
 eureka:
   client:
