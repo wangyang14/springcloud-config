@@ -39,6 +39,11 @@ info:
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
+logging:
+  level: 
+    org.springframework.boot: ERROR  #关闭spring启动时无用日志
+
+  
 management:
     endpoints:
         web:
