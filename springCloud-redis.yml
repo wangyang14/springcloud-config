@@ -1,0 +1,66 @@
+spring:
+    profiles:
+        active:
+        - dev
+---
+server:
+    port: 8095
+  
+spring:
+  application:
+    name: springCloud-redis #eureka前面的名字
+  profiles: dev
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:enjoy@localhost:7001/eureka
+  instance:
+    instance-id: springCloud-redis #eureka后面的名字
+    prefer-ip-address: true #鼠标放到eureka后面的名字左下角显示ip
+    lease-renewal-interval-in-seconds: 2 #设置心跳的时间，默认是30秒
+    lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
+    
+info:
+  app.name: springcloud-redis
+  company.name: enjoy11
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
+  
+management:
+    endpoints:
+        web:
+            exposure: 
+                include: '*'
+                
+---
+
+server:
+    port: 8095
+  
+spring:
+  application:
+    name: springCloud-redis #eureka前面的名字
+  profiles: beta
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:enjoy@localhost:7002/eureka
+  instance:
+    instance-id: springCloud-provider-product #eureka后面的名字
+    prefer-ip-address: true #鼠标放到eureka后面的名字左下角显示ip
+    lease-renewal-interval-in-seconds: 2 #设置心跳的时间，默认是30秒
+    lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
+    
+info:
+  app.name: springCloud-provider-product
+  company.name: enjoy
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
+  
+management:
+    endpoints:
+        web:
+            exposure: 
+                include: '*'
