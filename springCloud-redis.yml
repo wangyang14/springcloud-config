@@ -10,6 +10,18 @@ spring:
   application:
     name: springCloud-redis #eureka前面的名字
   profiles: dev
+  redis:
+    database: 0
+    host: 119.61.21.185
+    port: 15019
+    password: ph123456
+    jedis:
+      pool:
+        max-active: 1024
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 5000
     
 eureka:
   client:
