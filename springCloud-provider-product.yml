@@ -22,7 +22,7 @@ spring:
   
 logging:
   level: 
-    cn.enjoy.mapper: info
+    cn.enjoy.mapper: debug
     org.springframework.boot: ERROR  #关闭spring启动时无用日志
     
 eureka:
