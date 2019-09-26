@@ -9,6 +9,11 @@ mybatis:
   mapper-locations:
   - classpath:mapping/*.xml
   
+pagehelper.helperDialect=mysql
+pagehelper.reasonable=true
+pagehelper.supportMethodsArguments=true
+pagehelper.params=count=countSql
+  
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
