@@ -7,7 +7,7 @@ server:
     port: 8080
 mybatis:
   mapper-locations:
-  - classpath:mapping/*.xml
+  - classpath:cn.enjoy.mapping/*.xml
   
 spring:
   datasource:
