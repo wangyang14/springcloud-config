@@ -10,7 +10,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://119.61.21.185:15018/springcloud?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://119.61.21.185:15018/springcloud?allowMultiQueries=true&useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: ph123456
   application:
