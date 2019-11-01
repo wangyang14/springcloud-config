@@ -16,6 +16,9 @@ spring:
   application:
     name: springCloud-tm #eureka前面的名字
   profiles: dev
+
+# TM后台登陆密码，默认值为codingapi
+tx-lcn.manager.admin-key=codingapi
   
 logging:
   level: 
