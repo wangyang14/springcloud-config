@@ -26,7 +26,7 @@ tx-lcn:
   manager:
     admin-key: codingapi  # TM后台登陆密码，默认值为codingapi
     host: 127.0.0.1
-    port: ${server.port}
+    port: 8070
     heart-time: 15000 #心跳检测时间(ms)
     dtx-time: 30000   # 分布式事务执行总时间
   logger:
@@ -64,7 +64,7 @@ tx-lcn:
   manager:
     admin-key: codingapi  # TM后台登陆密码，默认值为codingapi
     host: 127.0.0.1
-    port: ${server.port}
+    port: 8070
     heart-time: 15000 #心跳检测时间(ms)
     dtx-time: 30000   # 分布式事务执行总时间
   logger:
