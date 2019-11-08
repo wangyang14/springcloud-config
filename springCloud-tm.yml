@@ -15,11 +15,11 @@ spring:
     password: ph123456
   application:
     name: springCloud-tm #eureka前面的名字
-  redis:
-    database: 0
-    host: 119.61.21.185
-    port: 15019
-    password: ph123456
+#   redis:
+#     database: 0
+#     host: 119.61.21.185
+#     port: 15019
+#     password: ph123456
   profiles: dev
 
 tx-lcn:
@@ -28,7 +28,7 @@ tx-lcn:
     host: 127.0.0.1
     port: 8070
     heart-time: 15000 #心跳检测时间(ms)
-    dtx-time: 30000   # 分布式事务执行总时间
+    dtx-time: 8000   # 分布式事务执行总时间(ms)
   logger:
     enabled: true     # 开启日志
 
@@ -53,11 +53,11 @@ spring:
     password: ph123456
   application:
     name: springCloud-tm #eureka前面的名字
-  redis:
-    database: 0
-    host: 119.61.21.185
-    port: 15019
-    password: ph123456
+#   redis:
+#     database: 0
+#     host: 119.61.21.185
+#     port: 15019
+#     password: ph123456
   profiles: pro
 
 tx-lcn:
@@ -66,7 +66,7 @@ tx-lcn:
     host: 127.0.0.1
     port: 8070
     heart-time: 15000 #心跳检测时间(ms)
-    dtx-time: 30000   # 分布式事务执行总时间
+    dtx-time: 8000   # 分布式事务执行总时间
   logger:
     enabled: true     # 开启日志
 
