@@ -15,11 +15,11 @@ spring:
     password: ph123456
   application:
     name: springCloud-tm #eureka前面的名字
-#   redis:
-#     database: 0
-#     host: 119.61.21.185
-#     port: 15019
-#     password: ph123456
+  redis:                 #分布式事务tx-lcn需要redis的锁机制，所以需要配上redis
+    database: 0
+    host: 119.61.21.185
+    port: 15019
+    password: ph123456
   profiles: dev
 
 tx-lcn:
@@ -53,11 +53,11 @@ spring:
     password: ph123456
   application:
     name: springCloud-tm #eureka前面的名字
-#   redis:
-#     database: 0
-#     host: 119.61.21.185
-#     port: 15019
-#     password: ph123456
+  redis:
+    database: 0
+    host: 119.61.21.185
+    port: 15019
+    password: ph123456
   profiles: pro
 
 tx-lcn:
