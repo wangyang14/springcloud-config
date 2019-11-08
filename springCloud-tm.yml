@@ -58,7 +58,7 @@ spring:
     host: 119.61.21.185
     port: 15019
     password: ph123456
-  profiles: dev
+  profiles: pro
 
 tx-lcn:
   manager:
