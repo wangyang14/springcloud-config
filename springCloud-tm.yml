@@ -22,46 +22,27 @@ spring:
     password: ph123456
   profiles: dev
 
-# TM后台登陆密码，默认值为codingapi
 tx-lcn:
   manager:
-    admin-key: codingapi
-  
+    admin-key: codingapi  # TM后台登陆密码，默认值为codingapi
+    host: 127.0.0.1
+    port: ${server.port}
+    heart-time: 15000 #心跳检测时间(ms)
+    dtx-time: 30000   # 分布式事务执行总时间
+  logger:
+    enabled: true     # 开启日志
+
 logging:
   level: 
     cn.enjoy.mapper: debug
     org.springframework.boot: ERROR  #关闭spring启动时无用日志
-    
-eureka:
-  client:
-    service-url:
-      defaultZone: http://admin:enjoy@localhost:7001/eureka
-  instance:
-    instance-id: springCloud-tm #eureka后面的名字
-    prefer-ip-address: true #鼠标放到eureka后面的名字左下角显示ip
-    lease-renewal-interval-in-seconds: 2 #设置心跳的时间，默认是30秒
-    lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
-    status-page-url: http://localhost:${server.port}/swagger-ui.html
-    
-info:
-  app.name: springcloud-provider-order
-  company.name: enjoy11
-  build.artifactId: $project.artifactId$
-  build.modelVersion: $project.modelVersion$
-  
-management:
-    endpoints:
-        web:
-            exposure: 
-                include: '*'
+    com.codingapi: debug
+
                 
 ---
 
 server:
-    port: 8061
-mybatis:
-  mapper-locations:
-  - classpath:mapping/*.xml
+    port: 7971
   
 spring:
   datasource:
@@ -71,32 +52,26 @@ spring:
     username: root
     password: ph123456
   application:
-    name: springCloud-provider-order #eureka前面的名字
-  profiles: beta
-  
+    name: springCloud-tm #eureka前面的名字
+  redis:
+    database: 0
+    host: 119.61.21.185
+    port: 15019
+    password: ph123456
+  profiles: dev
+
+tx-lcn:
+  manager:
+    admin-key: codingapi  # TM后台登陆密码，默认值为codingapi
+    host: 127.0.0.1
+    port: ${server.port}
+    heart-time: 15000 #心跳检测时间(ms)
+    dtx-time: 30000   # 分布式事务执行总时间
+  logger:
+    enabled: true     # 开启日志
+
 logging:
-  level:
-    cn.enjoy.mapper: info
-    org.springframework.boot: ERROR #关闭spring启动时无用日志
-    
-eureka:
-  client:
-    service-url:
-      defaultZone: http://admin:enjoy@localhost:7002/eureka
-  instance:
-    instance-id: springCloud-provider-order #eureka后面的名字
-    prefer-ip-address: true #鼠标放到eureka后面的名字左下角显示ip
-    lease-renewal-interval-in-seconds: 2 #设置心跳的时间，默认是30秒
-    lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
-    
-info:
-  app.name: springCloud-provider-order
-  company.name: enjoy
-  build.artifactId: $project.artifactId$
-  build.modelVersion: $project.modelVersion$
-  
-management:
-    endpoints:
-        web:
-            exposure: 
-                include: '*'
+  level: 
+    cn.enjoy.mapper: debug
+    org.springframework.boot: ERROR  #关闭spring启动时无用日志
+    com.codingapi: debug
