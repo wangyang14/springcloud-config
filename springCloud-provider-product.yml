@@ -19,24 +19,35 @@ spring:
   application:
     name: springCloud-provider-product #eureka前面的名字
   profiles: dev
-  redis:
-    database: 0
-    host: 119.61.21.185
-    port: 15019
-    password: ph123456
-    jedis:
-      pool:
-        max-active: 1024
-        max-wait: 10000
-        max-idle: 200
-        min-idle: 0
-    timeout: 5000
+#   redis:
+#     database: 0
+#     host: 119.61.21.185
+#     port: 15019
+#     password: ph123456
+#     jedis:
+#       pool:
+#         max-active: 1024
+#         max-wait: 10000
+#         max-idle: 200
+#         min-idle: 0
+#     timeout: 5000
 
   
 logging:
   level: 
     cn.enjoy.mapper: debug
-    # org.springframework.boot: ERROR  #关闭spring启动时无用日志
+    org.springframework.boot: ERROR  #关闭spring启动时无用日志
+    
+# 是否启动LCN负载均衡策略(优化选项，开启与否，功能不受影响)
+tx-lcn:
+  ribbon:                #微服务集群且用到 LCN事务模式时，为保证性能请开启TX-LCN重写的负载策略
+    loadbalancer:
+      dtx:
+        enabled: true
+  client:                # tx-manager 的配置地址，可以指定TM集群中的任何一个或多个地址
+    manager-address:
+    - 127.0.0.1:8070
+    chain-level: 3       # 调用链长度等级，默认值为3（优化选项。系统中每个请求大致调用链平均长度，估算值。）
     
 eureka:
   client:
@@ -64,10 +75,10 @@ management:
 ---
 
 server:
-    port: 8081
+    port: 8084
 mybatis:
   mapper-locations:
-  - classpath:mapping/*.xml
+  - classpath*:cn.enjoy.mapping/*.xml
   
 spring:
   datasource:
@@ -78,26 +89,51 @@ spring:
     password: ph123456
   application:
     name: springCloud-provider-product #eureka前面的名字
-  profiles: beta
+  profiles: pro
+  redis:
+    database: 0
+    host: 119.61.21.185
+    port: 15019
+    password: ph123456
+    jedis:
+      pool:
+        max-active: 1024
+        max-wait: 10000
+        max-idle: 200
+        min-idle: 0
+    timeout: 5000
+
   
 logging:
-  level:
-    cn.enjoy.mapper: info
-    org.springframework.boot: ERROR #关闭spring启动时无用日志
+  level: 
+    cn.enjoy.mapper: debug
+    org.springframework.boot: ERROR  #关闭spring启动时无用日志
+    
+# 是否启动LCN负载均衡策略(优化选项，开启与否，功能不受影响)
+tx-lcn:
+  ribbon:                #微服务集群且用到 LCN事务模式时，为保证性能请开启TX-LCN重写的负载策略
+    loadbalancer:
+      dtx:
+        enabled: true
+  client:                # tx-manager 的配置地址，可以指定TM集群中的任何一个或多个地址
+    manager-address:
+    - 127.0.0.1:8070
+    chain-level: 3       # 调用链长度等级，默认值为3（优化选项。系统中每个请求大致调用链平均长度，估算值。）
     
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:enjoy@localhost:7002/eureka
+      defaultZone: http://admin:enjoy@localhost:7001/eureka
   instance:
     instance-id: springCloud-provider-product #eureka后面的名字
     prefer-ip-address: true #鼠标放到eureka后面的名字左下角显示ip
     lease-renewal-interval-in-seconds: 2 #设置心跳的时间，默认是30秒
     lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
     
 info:
-  app.name: springCloud-provider-product
-  company.name: enjoy
+  app.name: springcloud-provider-product11
+  company.name: enjoy11
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
