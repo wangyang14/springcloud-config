@@ -34,6 +34,7 @@ spring:
 
   
 logging:
+  config: classpath:logback-spring.xm
   level: 
     cn.enjoy.mapper: debug
     org.springframework.boot: ERROR  #关闭spring启动时无用日志
@@ -105,6 +106,7 @@ spring:
 
   
 logging:
+  config: classpath:logback-spring.xm
   level: 
     cn.enjoy.mapper: debug
     org.springframework.boot: ERROR  #关闭spring启动时无用日志
