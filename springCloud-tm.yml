@@ -33,7 +33,7 @@ tx-lcn:
     enabled: true     # 开启日志
 
 logging:
-  config: classpath:logback-spring.xm
+  config: classpath:logback-spring.xml
   level: 
     cn.enjoy.mapper: debug
     org.springframework.boot: ERROR  #关闭spring启动时无用日志
@@ -72,7 +72,7 @@ tx-lcn:
     enabled: true     # 开启日志
 
 logging:
-  config: classpath:logback-spring.xm
+  config: classpath:logback-spring.xml
   level: 
     cn.enjoy.mapper: debug
     org.springframework.boot: ERROR  #关闭spring启动时无用日志
