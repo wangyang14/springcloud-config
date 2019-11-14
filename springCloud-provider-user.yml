@@ -4,7 +4,7 @@ spring:
         - dev
 ---
 server:
-    port: 8090
+    port: 8060
 mybatis:
   mapper-locations:
   - classpath*:cn.enjoy.mapping/*.xml
@@ -52,7 +52,7 @@ management:
 ---
 
 server:
-    port: 8091
+    port: 8090
 mybatis:
   mapper-locations:
   - classpath:mapping/*.xml
