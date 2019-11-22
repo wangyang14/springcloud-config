@@ -21,7 +21,7 @@ spring:
   profiles: dev
   
 logging:
-  config: classpath:logback-spring.xm
+  config: classpath:logback-spring-dev.xml
   level: 
     cn.enjoy.mapper: debug
     org.springframework.boot: ERROR  #关闭spring启动时无用日志
@@ -69,7 +69,7 @@ spring:
   profiles: beta
   
 logging:
-  config: classpath:logback-spring.xm
+  config: classpath:logback-spring-prod.xml
   level:
     cn.enjoy.mapper: info
     org.springframework.boot: ERROR #关闭spring启动时无用日志
