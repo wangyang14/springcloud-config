@@ -42,8 +42,6 @@ info:
   company.name: enjoy11
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
-
-wechat:
   appId: wx5963cfc0f6ecd620
   appSecret: 1d899a166f4831deef02d5ee79a95231
   openIdUrl: https://api.weixin.qq.com/sns/jscode2session
