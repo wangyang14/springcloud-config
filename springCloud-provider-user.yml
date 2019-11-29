@@ -36,6 +36,18 @@ eureka:
     lease-renewal-interval-in-seconds: 2 #设置心跳的时间，默认是30秒
     lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
     status-page-url: http://localhost:${server.port}/swagger-ui.html
+
+feign: 
+  hystrix: 
+    enabled: true
+  compression: 
+    request: 
+      enabled: true 
+      mime-types: #可以被压缩的类型 
+      - text/xml
+      - application/xml
+      - application/json
+      min-request-size: 2048 #超过2048字节压缩
     
 info:
   app.name: springcloud-provider-product11
