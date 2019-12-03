@@ -55,7 +55,7 @@ logging:
 ---
 
 server:
-    port: 7971
+    port: 7980
   
 spring:
   datasource:
