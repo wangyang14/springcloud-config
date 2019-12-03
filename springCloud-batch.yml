@@ -5,3 +5,7 @@ spring:
 ---
 server:
     port: 7972
+spring:
+  application:
+    name: springCloud-batch #eureka前面的名字
+  profiles: dev
