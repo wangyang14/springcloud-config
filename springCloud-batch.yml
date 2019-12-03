@@ -11,15 +11,15 @@ spring:
     name: springCloud-batch #eureka前面的名字
   profiles: dev
   
-feign: 
-  hystrix: 
-    enabled: true
-  compression: 
-    request: 
-      enabled: true 
-      mime-types: #可以被压缩的类型 
-      - text/xml
-      - application/xml
-      - application/json
-      min-request-size: 2048 #超过2048字节压缩
+# feign: 
+#   hystrix: 
+#     enabled: true
+#   compression: 
+#     request: 
+#       enabled: true 
+#       mime-types: #可以被压缩的类型 
+#       - text/xml
+#       - application/xml
+#       - application/json
+#       min-request-size: 2048 #超过2048字节压缩
 
