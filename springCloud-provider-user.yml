@@ -16,6 +16,18 @@ spring:
     url: jdbc:mysql://119.61.21.185:15018/ccrs?allowMultiQueries=true&useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: ph123456
+    maxActive: 20
+    initialSize: 5
+    minIdle: 5
+    maxWait: 10000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: true
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 100
   application:
     name: springCloud-provider-user #eureka前面的名字
   profiles: dev
