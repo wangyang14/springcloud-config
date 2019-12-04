@@ -1,0 +1,60 @@
+spring:
+    profiles:
+        active:
+        - dev
+---
+server:
+    port: 7971
+  
+spring:
+  application:
+    name: springCloud-consumer-rabbitmq #eureka前面的名字
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  profiles: dev
+    
+feign: 
+  hystrix: 
+    enabled: true
+  compression: 
+    request: 
+      enabled: true 
+      mime-types: #可以被压缩的类型 
+      - text/xml
+      - application/xml
+      - application/json
+      min-request-size: 2048 #超过2048字节压缩
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:enjoy@localhost:7001/eureka
+    register-with-eureka: false
+  instance:
+    instance-id: springCloud-consumer-rabbitmq #eureka后面的名字
+    prefer-ip-address: true #鼠标放到eureka后面的名字左下角显示ip
+    lease-renewal-interval-in-seconds: 2 #设置心跳的时间，默认是30秒
+    lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
+    
+info:
+  app.name: springCloud-consumer-rabbitmq
+  company.name: enjoy11
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
+  
+logging:
+  config: classpath:logback-spring-dev.xml
+  level: 
+    org.springframework.boot: ERROR  #关闭spring启动时无用日志
+
+  
+management:
+    endpoints:
+        web:
+            exposure: 
+                include: '*'
+                
+---
