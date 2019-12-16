@@ -44,6 +44,7 @@ eureka:
     prefer-ip-address: true #鼠标放到eureka后面的名字左下角显示ip
     lease-renewal-interval-in-seconds: 30 #设置心跳的时间，默认是30秒
     lease-expiration-duration-in-seconds: 90 #如果现在超过了5秒的间隔就表示注册中心挂了（默认是90秒）
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
     
 info:
   app.name: springcloud-redis
