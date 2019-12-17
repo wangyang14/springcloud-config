@@ -39,6 +39,7 @@ ribbon:
   eager-load:
     enabled: true
     clients: springCloud-provider-user,springCloud-provider-shop,springCloud-provider-product,springCloud-provider-order
+
 	
 eureka:
   client:
