@@ -65,7 +65,7 @@ feign:
 info:
   app.name: springcloud-provider-shop
   company.name: enjoy11
-  imgLocation: C:/imgs/aa
+  app.imgLocation: C:/imgs/aa
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
