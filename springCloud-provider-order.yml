@@ -68,7 +68,11 @@ eureka:
 info:
   app.name: springcloud-provider-order
   company.name: enjoy11
-  build.artifactId: $project.artifactId$
+  weChat.appId: wx5963cfc0f6ecd620
+  weChat.mchId: 1514514091
+  weChat.appKey: 0494d9a8fb9da2f80ae95dbb6ff95c63
+  weChat.appSecret: 1d899a166f4831deef02d5ee79a95231
+  build.arti.factId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
 management:
