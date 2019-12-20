@@ -73,6 +73,7 @@ info:
   weChat.appKey: 0494d9a8fb9da2f80ae95dbb6ff95c63
   weChat.appSecret: 1d899a166f4831deef02d5ee79a95231
   weChat.payUrl: https://api.mch.weixin.qq.com/pay/unifiedorder
+  weChat.notifyUrl: https://119.61.21.185:15011/weChatNotify 
   build.arti.factId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
