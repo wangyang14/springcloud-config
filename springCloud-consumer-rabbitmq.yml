@@ -27,6 +27,12 @@ feign:
       - application/xml
       - application/json
       min-request-size: 2048 #超过2048字节压缩
+      
+ribbon:
+  eager-load:
+    enabled: true #解决第一次加载没有服务的问题
+    clients:
+    - SPRINGCLOUD-ZUUL-GATEWAY,SPRINGCLOUD-PROVIDER_USER,SPRINGCLOUD-REDIS,SPRINGCLOUD-PROVIDER_SHOP,SPRINGCLOUD-PROVIDER-ORDER
     
 eureka:
   client:
