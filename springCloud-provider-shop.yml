@@ -70,7 +70,7 @@ ribbon:
 info:
   app.name: springcloud-provider-shop
   company.name: enjoy11
-  app.imgLocation: /usr/rs/Img
+  app.imgLocation: /usr/rs/Img/
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
