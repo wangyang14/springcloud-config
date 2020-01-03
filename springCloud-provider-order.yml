@@ -81,10 +81,10 @@ eureka:
 info:
   app.name: springcloud-provider-order
   company.name: enjoy11
-  weChat.appId: wx5963cfc0f6ecd620
-  weChat.mchId: 1514514091
-  weChat.appKey: 0494d9a8fb9da2f80ae95dbb6ff95c63
-  weChat.appSecret: 1d899a166f4831deef02d5ee79a95231
+  weChat.appId: wx05218589192f2c39
+  weChat.mchId: 1571106531
+  weChat.appKey: aaa7cfd4250e3793b4d64ed4a4b99e2a
+  weChat.appSecret: 64eedc9bafd03a075f0bfef4fa2d3b78
   weChat.payUrl: https://api.mch.weixin.qq.com/pay/unifiedorder
   weChat.notifyUrl: https://119.61.21.185:15011/weChat/payCallBack 
   build.arti.factId: $project.artifactId$
