@@ -47,7 +47,12 @@ eureka:
     
 info:
   app.name: springCloud-consumer-rabbitmq
-  company.name: enjoy11
+  company.name: ruoshi
+  weChat.appId: wx05218589192f2c39
+  weChat.mchId: 1571106531
+  weChat.appKey: aaa7cfd4250e3793b4d64ed4a4b99e2a
+  weChat.appSecret: 64eedc9bafd03a075f0bfef4fa2d3b78
+  weChat.orderqueryUrl: https://api.mch.weixin.qq.com/pay/orderquery
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
