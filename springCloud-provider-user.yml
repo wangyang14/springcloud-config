@@ -68,12 +68,12 @@ ribbon:
 
     
 info:
-  app.name: springcloud-provider-product11
-  company.name: enjoy11
+  app.name: springCloud-provider-user
+  company.name: ruoshi
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
-  app.appId: wx5963cfc0f6ecd620
-  app.appSecret: 1d899a166f4831deef02d5ee79a95231
+  app.appId: wx05218589192f2c39
+  app.appSecret: 64eedc9bafd03a075f0bfef4fa2d3b78
   app.openIdUrl: https://api.weixin.qq.com/sns/jscode2session
   
 management:
