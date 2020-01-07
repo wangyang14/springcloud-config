@@ -53,6 +53,7 @@ info:
   weChat.appKey: aaa7cfd4250e3793b4d64ed4a4b99e2a
   weChat.appSecret: 64eedc9bafd03a075f0bfef4fa2d3b78
   weChat.orderqueryUrl: https://api.mch.weixin.qq.com/pay/orderquery
+  weChat.ordercloseUrl: https://api.mch.weixin.qq.com/pay/closeorder
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
   
