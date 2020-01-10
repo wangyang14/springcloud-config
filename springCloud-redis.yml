@@ -39,7 +39,8 @@ ribbon:
   eager-load:
     enabled: true #解决第一次加载没有服务的问题
     clients:
-    - springCloud-provider-shop
+    - SPRINGCLOUD-ZUUL-GATEWAY,SPRINGCLOUD-PROVIDER_USER,SPRINGCLOUD-PROVIDER_SHOP,SPRINGCLOUD-CONSUMER-RABBITMQ,SPRINGCLOUD-PROVIDER-ORDER
+
     
 eureka:
   client:
