@@ -66,6 +66,18 @@ ribbon:
     clients:
     - SPRINGCLOUD-ZUUL-GATEWAY,SPRINGCLOUD-PROVIDER_USER,SPRINGCLOUD-REDIS,SPRINGCLOUD-CONSUMER-RABBITMQ,SPRINGCLOUD-PROVIDER-ORDER
 
+# 是否启动LCN负载均衡策略(优化选项，开启与否，功能不受影响)
+tx-lcn:
+  ribbon:                #微服务集群且用到 LCN事务模式时，为保证性能请开启TX-LCN重写的负载策略
+    loadbalancer:
+      dtx:
+        enabled: true
+  client:                # tx-manager 的配置地址，可以指定TM集群中的任何一个或多个地址
+    manager-address:
+    - 127.0.0.1:8070
+    chain-level: 3       # 调用链长度等级，默认值为3（优化选项。系统中每个请求大致调用链平均长度，估算值。）
+
+
 # JWT配置
 jwt:
   # 密匙KEY
