@@ -40,7 +40,7 @@ tx-lcn:
     host: 127.0.0.1
     port: 8070
     heart-time: 15000 #心跳检测时间(ms)
-    dtx-time: 8000   # 分布式事务执行总时间(ms)
+    dtx-time: 600000   # 分布式事务执行总时间(ms)
   logger:
     enabled: true     # 开启日志
 
@@ -79,7 +79,7 @@ tx-lcn:
     host: 127.0.0.1
     port: 8070
     heart-time: 15000 #心跳检测时间(ms)
-    dtx-time: 8000   # 分布式事务执行总时间
+    dtx-time: 600000   # 分布式事务执行总时间
   logger:
     enabled: true     # 开启日志
 
