@@ -50,7 +50,18 @@ feign:
       - application/json
       min-request-size: 2048 #超过2048字节压缩
       
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            # 熔断器超时时间，默认：1000/毫秒
+            timeoutInMilliseconds: 5000
+      
 ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
   eager-load:
     enabled: true #解决第一次加载没有服务的问题
     clients:
