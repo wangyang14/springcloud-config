@@ -60,8 +60,8 @@ hystrix:
             timeoutInMilliseconds: 5000
       
 ribbon:
-  ReadTimeout: 5000
-  ConnectTimeout: 5000
+  readTimeout: 5000
+  connectTimeout: 5000
   eager-load:
     enabled: true #解决第一次加载没有服务的问题
     clients:
